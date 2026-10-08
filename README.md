@@ -137,3 +137,54 @@ Once you have implemented the project code, a typical local workflow looks like 
    ```
 
 The `app/` package and `sample-request.json` are files you create during the project. Make the sample request match your `/predict` input schema before running the commands above.
+
+# NYC Yellow Taxi Trip Duration Prediction
+
+This project trains and serves a machine learning model that predicts the duration of NYC Yellow Taxi trips for January 2025.
+
+The project uses:
+
+- scikit-learn
+- RandomForestRegressor
+- MLflow
+- FastAPI
+- pytest
+- uv
+
+---
+
+## Project Goal
+
+The goal of this project is to build an end-to-end machine learning workflow that:
+
+1. Loads NYC Yellow Taxi trip data.
+2. Creates the target variable `duration`.
+3. Cleans the dataset.
+4. Engineers useful features.
+5. Trains a Random Forest regression model.
+6. Evaluates the model using RMSE.
+7. Tracks experiments with MLflow.
+8. Saves the final model.
+9. Serves predictions through a FastAPI endpoint.
+10. Tests the API automatically with pytest.
+
+---
+
+## Dataset
+
+Dataset:
+
+NYC Yellow Taxi Trip Records
+
+Period:
+
+January 2025
+
+Target:
+
+`duration`
+
+The target is calculated as:
+
+```text
+dropoff time - pickup time
